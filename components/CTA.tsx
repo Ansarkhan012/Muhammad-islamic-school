@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function CTA() {
   return (
        <section className="relative mb-10 py-20 bg-green-900">
-  {/* Pattern Overlay */}
+ 
   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_left,white,transparent_60%)]"></div>
 
   <div className="relative container mx-auto px-4">
