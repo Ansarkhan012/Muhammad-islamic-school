@@ -32,7 +32,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full shadow-lg bg-white">
       {/* TOP BAR */}
       <div
-        className="bg-green-700 text-white py-3"
+        className="bg-[#153c58] text-white py-3"
         style={{
           backgroundImage: "url('/images/pattern.png')",
           backgroundBlendMode: 'overlay',
@@ -40,7 +40,7 @@ export default function Header() {
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center">
-            <Mail className="h-4 w-4 mr-2 text-green-300" />
+            <Mail className="h-4 w-4 mr-2 text-[#C9A24D]" />
             <a
               href="mailto:muhammadislamicschool@gmail.com"
               className="text-[10px] md:text-sm hover:text-green-200"
@@ -50,7 +50,7 @@ export default function Header() {
           </div>
 
           <div className="flex items-center">
-            <Phone className="h-4 w-4 mr-2 text-green-300" />
+            <Phone className="h-4 w-4 mr-2 text-[#C9A24D]" />
             <span className="text-[10px] md:text-sm font-medium">
               +92 349 9624807
             </span>
@@ -58,20 +58,20 @@ export default function Header() {
         </div>
       </div>
 
-      {/* MAIN HEADER */}
+     
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
-          {/* LOGO */}
+        
           <Link href="/" className="flex items-center space-x-3">
             <Image
-              src="/images/logo.png"
+              src="/images/N-logo.png"
               alt="Muhammad Islamic School"
-              width={48}
-              height={48}
+              width={50}
+              height={50}
               priority
             />
             <div>
-              <h1 className="text-md md:text-2xl font-bold bg-green-700 bg-clip-text text-transparent">
+              <h1 className="text-md md:text-2xl font-bold bg-[#153c58] bg-clip-text text-transparent">
                 Muhammad
               </h1>
               <p className="text-xs text-gray-600 font-medium">
@@ -85,7 +85,7 @@ export default function Header() {
             {navItems.map((item) =>
               item.name === 'COURSES' ? (
                 <div key={item.name} className="relative group">
-                  <span className="px-5 py-2.5 flex items-center gap-1 rounded-lg font-medium text-sm text-gray-800 hover:text-green-700 cursor-pointer">
+                  <span className="px-5 py-2.5 flex items-center gap-1 rounded-lg font-medium text-sm text-gray-800 hover:text-[#C9A24D] cursor-pointer">
                     COURSES
                     <ChevronDown size={16} />
                   </span>
@@ -97,7 +97,7 @@ export default function Header() {
                         <Link
                           key={course.name}
                           href={course.href}
-                          className="block px-4 py-3 rounded-lg text-sm text-gray-700 hover:bg-green-50 hover:text-green-700"
+                          className="block px-4 py-3 rounded-lg text-sm text-gray-700 hover:bg-[#fffbf2] hover:text-[#C9A24D]"
                         >
                           {course.name}
                         </Link>
@@ -112,8 +112,8 @@ export default function Header() {
                   className={`px-5 py-2.5 rounded-lg font-medium text-sm transition
                     ${
                       item.highlight
-                        ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-md hover:shadow-lg'
-                        : 'text-gray-800 hover:text-green-700'
+                        ? 'bg-[#153c58] text-[white] shadow-md hover:shadow-lg'
+                        : 'text-gray-800 hover:text-[#C9A24D]'
                     }`}
                 >
                   {item.name}
@@ -177,7 +177,7 @@ export default function Header() {
                     ${
                       item.highlight
                         ? 'bg-gradient-to-r from-green-600 to-green-700 text-white'
-                        : 'text-gray-800 hover:bg-green-50 hover:text-green-700'
+                        : 'text-gray-800 hover:bg-green-50 hover:text-[#C9A24D]'
                     }`}
                 >
                   {item.name}

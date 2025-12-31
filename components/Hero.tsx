@@ -15,21 +15,21 @@ export default function Hero() {
       image: '/images/1st.webp',
       title: 'Start Your Complete Quran Learning Experience',
       subtitle: 'Interactive Online Quran Classes Designed For All Ages, Anytime, Anywhere',
-      highlightColor: 'text-green-400'
+      highlightColor: 'text-[#C9A24D]'
     },
     {
       id: 2,
       image: '/images/2nd.webp',
       title: 'Learn from Certified Quran Teachers',
       subtitle: 'One-on-one sessions with native Arabic speakers and personalized learning plans',
-      highlightColor: 'text-green-400'
+      highlightColor: 'text-[#C9A24D]'
     },
     {
       id: 3,
       image: '/images/3rd.webp',
       title: 'Master Quran Recitation & Tajweed',
       subtitle: 'Professional guidance to perfect your pronunciation and understanding',
-      highlightColor: 'text-green-400'
+      highlightColor: 'text-[#C9A24D]'
     }
   ];
 
@@ -78,10 +78,10 @@ export default function Hero() {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <Link href={"/contact"} className="bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <Link href={"/contact"} className="bg-[#C9A24D] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                       Register Now
                     </Link>
-                    <Link href={"/contact"} className="border-2 border-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-green-700 hover:text-white">
+                    <Link href={"/contact"} className="border-2 border-[#C9A24D] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-[#C9A24D] hover:text-white">
                       Get Free Trial
                     </Link>
                   </div>

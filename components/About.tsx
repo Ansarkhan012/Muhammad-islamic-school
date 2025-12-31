@@ -16,10 +16,10 @@ export default function AboutPage() {
       <section className="relative py-16 md:py-24 overflow-hidden ">
   <div className="container mx-auto px-4 relative">
     <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
-      {/* Text Content */}
+      
       <div className="lg:w-1/2 pl-10 text-center lg:text-left">
   <h1 className="text-3xl md:text-5xl  font-bold text-gray-900 mb-6">
-    About <span className="text-emerald-700">Muhammad Islamic School</span>
+    About <span className="text-[#C9A24D]">Muhammad Islamic School</span>
   </h1>
 
   <p className=" md:text-md text-gray-700 mb-8 leading-relaxed">
@@ -36,14 +36,14 @@ export default function AboutPage() {
 </div>
 
       
-      {/* Image Container */}
+      
       <div className="lg:w-1/2 flex justify-center">
         <div className="relative w-full max-w-md">
-          {/* Decorative elements */}
+         
           <div className="absolute -top-4 -right-4 w-24 h-24 bg-emerald-200 rounded-full opacity-20"></div>
           <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-emerald-300 rounded-full opacity-20"></div>
           
-          {/* Main Image with shadow and border */}
+          
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white transform rotate-3 hover:rotate-0 transition-transform duration-500">
             <img 
               src="/images/structured.png" 
@@ -53,18 +53,18 @@ export default function AboutPage() {
             />
           </div>
           
-          {/* Floating badges */}
+          
           <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg border border-emerald-100">
             <div className="flex items-center">
-              <Award className="h-8 w-8 text-emerald-600 mr-3" />
+              <Award className="h-8 w-8 text-[#C9A24D] mr-3" />
               <div>
                 <div className="text-sm text-gray-600">Since</div>
-                <div className="text-2xl font-bold text-emerald-700">2019</div>
+                <div className="text-2xl font-bold text-[#C9A24D]">2019</div>
               </div>
             </div>
           </div>
           
-          <div className="absolute -top-6 -left-6 bg-emerald-600 text-white p-3 rounded-full shadow-lg">
+          <div className="absolute -top-6 -left-6 bg-[#C9A24D] text-white p-3 rounded-full shadow-lg">
             <BookOpen className="h-8 w-8" />
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
           key={index}
           className="border p-6 rounded-xl text-center hover:bg-white/20 transition"
         >
-          <div className="flex justify-center mb-4 text-emerald-400">
+          <div className="flex justify-center mb-4 text-[#C9A24D]">
             {lead.iconss}
           </div>
           <p className="font-semibold">{lead.name}</p>
@@ -111,7 +111,7 @@ export default function AboutPage() {
   <div className="max-w-6xl mx-auto px-5">
    
     <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-14">
-      What Makes Us <span className='text-green-700'>Different</span> From Others
+      What Makes Us <span className='text-[#C9A24D]'>Different</span> From Others
     </h2>
 
     
@@ -119,7 +119,7 @@ export default function AboutPage() {
       
       
       <div className="p-8 rounded-2xl border border-gray-200 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.08),transparent_60%)]">
-        <h3 className="text-xl font-semibold text-green-900 mb-4">
+        <h3 className="text-xl font-semibold text-[#153c58] mb-4">
           Monitoring System & Schedule
         </h3>
         <p className="text-gray-700 leading-relaxed">
@@ -131,7 +131,7 @@ export default function AboutPage() {
 
       
       <div className="p-8 rounded-2xl border border-gray-200 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.08),transparent_60%)]">
-        <h3 className="text-xl font-semibold text-green-900 mb-4">
+        <h3 className="text-xl font-semibold text-[#153c58] mb-4">
           Student Monthly Test Report
         </h3>
         <p className="text-gray-700 leading-relaxed">
@@ -143,7 +143,7 @@ export default function AboutPage() {
 
       
       <div className="p-8 rounded-2xl border border-gray-200 bg-[radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.08),transparent_60%)]">
-        <h3 className="text-xl font-semibold text-green-900 mb-4">
+        <h3 className="text-xl font-semibold text-[#153c58] mb-4">
           Comparison of Results
         </h3>
         <p className="text-gray-700 leading-relaxed">
@@ -160,7 +160,7 @@ export default function AboutPage() {
 <section className="flex flex-col lg:flex-row min-h-[60vh]">
   
   
-  <div className="flex-1 flex items-center justify-center bg-emerald-700 text-white p-10">
+  <div className="flex-1 flex items-center justify-center bg-[#153c58] text-white p-10">
     <h1 className="text-3xl md:text-4xl font-bold text-center">
       Noorani Qaida Online
     </h1>
@@ -190,7 +190,7 @@ export default function AboutPage() {
 
       <Link
         href="/contact"
-        className="inline-block bg-emerald-600 hover:bg-emerald-700 transition px-6 py-3 rounded-lg font-semibold"
+        className="inline-block bg-[#153c58] hover:bg-[#1d5075] transition px-6 py-3 rounded-lg font-semibold"
       >
         Contact
       </Link>

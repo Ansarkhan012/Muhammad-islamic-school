@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function CTA() {
   return (
-       <section className="relative mb-10 py-20 bg-green-900">
+       <section className="relative mb-10 py-20 bg-[#153c58]">
  
   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_left,white,transparent_60%)]"></div>
 
@@ -22,14 +22,14 @@ export default function CTA() {
       <div className="flex flex-col sm:flex-row gap-5 justify-center">
         <Link
           href="/contact"
-          className="bg-white text-green-700 hover:bg-emerald-50 font-semibold py-3 px-8 rounded-lg transition shadow-lg"
+          className="bg-[#C9A24D] text-white hover:bg-[#a8853b] font-semibold py-3 px-8 rounded-lg transition shadow-lg"
         >
           Start Free Trial
         </Link>
 
         <Link
           href="/contact"
-          className="border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-lg transition"
+          className="border-2 border-[#C9A24D] text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-lg transition"
         >
           More Info
         </Link>
