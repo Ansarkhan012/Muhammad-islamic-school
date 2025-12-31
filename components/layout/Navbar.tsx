@@ -1,11 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openCourses, setOpenCourses] = useState(false);
 
   const navItems = [
     { name: 'HOME', href: '/' },
@@ -17,114 +19,173 @@ export default function Header() {
     { name: 'FREE TRIAL', href: '/contact', highlight: true },
   ];
 
+  const coursesDropdown = [
+    { name: 'Learn Islamic Studies', href: '/courses/learn-islamic-studies' },
+    { name: 'Namaz & Dua', href: '/courses/namaz-dua' },
+    { name: 'Quran Memorization', href: '/courses/quran-memorization' },
+    { name: 'Quran Reading with Tajweed', href: '/courses/quran-reading-with-tajweed' },
+    { name: 'Quran Reciting', href: '/courses/quran-reciting' },
+    { name: 'Quran with Tafseer', href: '/courses/quran-with-tafseer' },
+  ];
+
   return (
-    <header className="sticky top-0 z-50 w-full shadow-lg">
-  
-      <div 
+    <header className="sticky top-0 z-50 w-full shadow-lg bg-white">
+      {/* TOP BAR */}
+      <div
         className="bg-green-700 text-white py-3"
         style={{
           backgroundImage: "url('/images/pattern.png')",
           backgroundBlendMode: 'overlay',
         }}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex flex-row justify-between items-center space-y-1 md:space-y-0">
-           
-            <div className="flex items-center">
-              <Mail className="h-4 w-4 mr-2 text-green-300" />
-              <a 
-                href="mailto:alsheerazislamicschool@gmail.com" 
-                className="text-[10px] md:text-sm hover:text-green-200 transition-colors duration-200"
-              >
-                muhammadislamicschool@gmail.com
-              </a>
-            </div>
-            
-           
-            <div className="flex items-center">
-              <Phone className="h-4 w-4 mr-2 text-green-300" />
-              <span className="text-[10px] md:text-sm font-medium">+92 349 9624807</span>
-            </div>
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <div className="flex items-center">
+            <Mail className="h-4 w-4 mr-2 text-green-300" />
+            <a
+              href="mailto:muhammadislamicschool@gmail.com"
+              className="text-[10px] md:text-sm hover:text-green-200"
+            >
+              muhammadislamicschool@gmail.com
+            </a>
+          </div>
+
+          <div className="flex items-center">
+            <Phone className="h-4 w-4 mr-2 text-green-300" />
+            <span className="text-[10px] md:text-sm font-medium">
+              +92 349 9624807
+            </span>
           </div>
         </div>
       </div>
 
-     
-      <div className="bg-white">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex justify-between items-center">
-            {/* Logo */}
-            <Link href={"/"}>
-            <div className="flex items-center space-x-3">
-              <div className="">
-                <img src="/images/logo.png" className='w-12' alt="" />
-              </div>
-              <div>
-                <h1 className="text-md md:text-2xl font-bold bg-green-700 bg-clip-text text-transparent">
-                  Muhammad
-                </h1>
-                <p className="text-xs text-gray-600 font-medium">Islamic School</p>
-              </div>
+      {/* MAIN HEADER */}
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex justify-between items-center">
+          {/* LOGO */}
+          <Link href="/" className="flex items-center space-x-3">
+            <Image
+              src="/images/logo.png"
+              alt="Muhammad Islamic School"
+              width={48}
+              height={48}
+              priority
+            />
+            <div>
+              <h1 className="text-md md:text-2xl font-bold bg-green-700 bg-clip-text text-transparent">
+                Muhammad
+              </h1>
+              <p className="text-xs text-gray-600 font-medium">
+                Islamic School
+              </p>
             </div>
-            </Link>
+          </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1">
-              {navItems.map((item) => (
+          {/* DESKTOP NAV */}
+          <nav className="hidden lg:flex items-center space-x-1">
+            {navItems.map((item) =>
+              item.name === 'COURSES' ? (
+                <div key={item.name} className="relative group">
+                  <span className="px-5 py-2.5 flex items-center gap-1 rounded-lg font-medium text-sm text-gray-800 hover:text-green-700 cursor-pointer">
+                    COURSES
+                    <ChevronDown size={16} />
+                  </span>
+
+                  {/* Dropdown */}
+                  <div className="absolute left-0 top-full mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-2">
+                      {coursesDropdown.map((course) => (
+                        <Link
+                          key={course.name}
+                          href={course.href}
+                          className="block px-4 py-3 rounded-lg text-sm text-gray-700 hover:bg-green-50 hover:text-green-700"
+                        >
+                          {course.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`
-                    px-5 py-2.5 rounded-lg font-medium text-sm transition-all duration-300
-                    ${item.highlight
-                      ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-md hover:shadow-lg hover:scale-105'
-                      : 'text-gray-800 hover:text-green-700 '
-                    }
-                  `}
+                  className={`px-5 py-2.5 rounded-lg font-medium text-sm transition
+                    ${
+                      item.highlight
+                        ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-md hover:shadow-lg'
+                        : 'text-gray-800 hover:text-green-700'
+                    }`}
                 >
                   {item.name}
                 </Link>
-              ))}
-            </nav>
+              )
+            )}
+          </nav>
 
-            {/* Mobile menu button */}
-            <button
-              className="lg:hidden p-2.5 rounded-lg hover:bg-gray-100 transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <X size={24} className="text-gray-700" />
-              ) : (
-                <Menu size={24} className="text-gray-700" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="lg:hidden mt-4 pb-2 animate-slideDown">
-              <div className="flex flex-col space-y-2 bg-white rounded-xl shadow-lg p-4 border border-gray-100">
-                {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={`
-                      px-4 py-3.5 rounded-lg font-medium text-sm transition-all
-                      ${item.highlight
-                        ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-sm'
-                        : 'text-gray-800 hover:bg-green-50 hover:text-green-700'
-                      }
-                    `}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
+          {/* MOBILE BUTTON */}
+          <button
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+
+        {/* MOBILE MENU */}
+        {isMenuOpen && (
+          <div className="lg:hidden mt-4 bg-white rounded-xl shadow-lg p-4 space-y-2">
+            {navItems.map((item) =>
+              item.name === 'COURSES' ? (
+                <div key={item.name}>
+                  <button
+                    onClick={() => setOpenCourses(!openCourses)}
+                    className="w-full flex justify-between items-center px-4 py-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-green-50"
+                  >
+                    COURSES
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform ${
+                        openCourses ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+
+                  {openCourses && (
+                    <div className="mt-1 ml-4 space-y-1">
+                      {coursesDropdown.map((course) => (
+                        <Link
+                          key={course.name}
+                          href={course.href}
+                          onClick={() => {
+                            setIsMenuOpen(false);
+                            setOpenCourses(false);
+                          }}
+                          className="block px-4 py-2 rounded-lg text-sm text-gray-600 hover:bg-green-50 hover:text-green-700"
+                        >
+                          {course.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block px-4 py-3 rounded-lg text-sm font-medium
+                    ${
+                      item.highlight
+                        ? 'bg-gradient-to-r from-green-600 to-green-700 text-white'
+                        : 'text-gray-800 hover:bg-green-50 hover:text-green-700'
+                    }`}
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
+          </div>
+        )}
       </div>
     </header>
   );
