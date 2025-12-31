@@ -131,7 +131,7 @@ export default function ContactPage() {
 
     
       <div className="text-center mb-12">
-        <h1 className="text-5xl text-green-700 font-bold mb-2">Contact</h1>
+        <h1 className="text-5xl text-[#C9A24D] font-bold mb-2">Contact</h1>
         <h1 className='text-3xl  font-bold'>Muhammad Islamic School</h1>
         <p className='text-gray-600 mt-3 px-20'>We are proud of ourselves as the premier online platform for E-services worldwide. Our students appreciate our friendly, professional, and cooperative approach to providing Learn Quran Online services. We are dedicated to assisting you in surpassing your learning goals. If you encounter any challenges requiring solutions,please don’t hesitate to reach out. We are here to collaborate with you and find the answers you’ve been seeking.</p>
       </div>
@@ -141,7 +141,7 @@ export default function ContactPage() {
         <div style={{
           backgroundImage: `url('/images/pattern.png')`
         }}
-         className="bg-green-900 text-white rounded-3xl p-8">
+         className="bg-[#153c58] text-white rounded-3xl p-8">
           <h2 className="text-3xl font-bold mb-6 text-center">
             Quick Admission Form
           </h2>
