@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="sticky -t-10 z-10">
+        <header className="sticky -top-12 z-10">
           <Header />
         </header>
         <main>{children}</main>
