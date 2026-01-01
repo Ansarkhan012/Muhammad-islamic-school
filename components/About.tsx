@@ -17,7 +17,7 @@ export default function AboutPage() {
   <div className="container mx-auto px-4 relative">
     <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
       
-      <div className="lg:w-1/2 pl-10 text-center lg:text-left">
+      <div className="lg:w-1/2 md:pl-10 text-center lg:text-left">
   <h1 className="text-3xl md:text-5xl  font-bold text-gray-900 mb-6">
     About <span className="text-[#C9A24D]">Muhammad Islamic School</span>
   </h1>
