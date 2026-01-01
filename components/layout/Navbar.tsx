@@ -14,7 +14,6 @@ export default function Header() {
     { name: 'ABOUT', href: '/about' },
     { name: 'COURSES', href: '/courses' },
     { name: 'FEES', href: '/fees' },
-    { name: 'BLOG', href: '/blog' },
     { name: 'CONTACT', href: '/contact' },
     { name: 'FREE TRIAL', href: '/contact', highlight: true },
   ];
@@ -91,8 +90,8 @@ export default function Header() {
                   </span>
 
                   {/* Dropdown */}
-                  <div className="absolute left-0 top-full mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-2">
+                  <div className="absolute left-0 top-full mt-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="bg-white  shadow-xl border border-gray-100 p-2">
                       {coursesDropdown.map((course) => (
                         <Link
                           key={course.name}
@@ -139,7 +138,7 @@ export default function Header() {
                 <div key={item.name}>
                   <button
                     onClick={() => setOpenCourses(!openCourses)}
-                    className="w-full flex justify-between items-center px-4 py-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-green-50"
+                    className="w-full flex justify-between items-center px-4 py-3 rounded-lg text-sm font-medium text-gray-800 hover:bg-[#fffbf2]"
                   >
                     COURSES
                     <ChevronDown
@@ -160,7 +159,7 @@ export default function Header() {
                             setIsMenuOpen(false);
                             setOpenCourses(false);
                           }}
-                          className="block px-4 py-2 rounded-lg text-sm text-gray-600 hover:bg-green-50 hover:text-green-700"
+                          className="block px-4 py-2 rounded-lg text-sm text-gray-600 hover:bg-[#fffbf2] hover:text-[#C9A24D]"
                         >
                           {course.name}
                         </Link>
@@ -176,7 +175,7 @@ export default function Header() {
                   className={`block px-4 py-3 rounded-lg text-sm font-medium
                     ${
                       item.highlight
-                        ? 'bg-gradient-to-r from-green-600 to-green-700 text-white'
+                        ? 'bg-[#153c58] text-white'
                         : 'text-gray-800 hover:bg-green-50 hover:text-[#C9A24D]'
                     }`}
                 >

@@ -4,7 +4,7 @@ export default function Footer() {
       backgroundImage: `url('/images/pattern.png')`
     }} className="bg-[#153c58] text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-6 gap-8">
           
           <div className="md:col-span-2">
             <div className="flex items-center mb-2 space-x-3">
