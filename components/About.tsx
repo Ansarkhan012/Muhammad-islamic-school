@@ -46,7 +46,7 @@ export default function AboutPage() {
           
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white transform rotate-3 hover:rotate-0 transition-transform duration-500">
             <img 
-              src="/images/structured.png" 
+              src="/images/structured.webp" 
               className="w-full h-auto object-cover"
               alt="Islamic School Structure"
               
@@ -161,7 +161,7 @@ export default function AboutPage() {
   
   
   <div className="flex-1 flex items-center justify-center bg-[#153c58] text-white p-10">
-    <h1 className="text-3xl md:text-4xl font-bold text-center">
+    <h1 className="text-3xl py-10 md:text-4xl font-bold text-center">
       Noorani Qaida Online
     </h1>
   </div>
@@ -171,7 +171,7 @@ export default function AboutPage() {
     className="flex-1 flex flex-col justify-center p-10 text-white bg-center bg-cover relative"
     style={{
       backgroundImage:
-        "url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae')",
+        "url('/images/quran.webp')",
     }}
   >
     
@@ -219,22 +219,22 @@ export default function AboutPage() {
         </p>
       </div>
 
-      {/* Vision Image */}
+      
       <div>
         <img
-          src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae"
+          src="/images/quran.webp"
           alt="Our Vision"
           className="rounded-2xl shadow-lg w-full object-cover"
         />
       </div>
     </div>
 
-    {/* Mission Section */}
+    
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      {/* Mission Image */}
+    
       <div className="order-2 lg:order-1">
         <img
-          src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53"
+          src="/images/quran1.webp"
           alt="Our Mission"
           className="rounded-2xl shadow-lg w-full object-cover"
         />

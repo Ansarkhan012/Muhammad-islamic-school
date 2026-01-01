@@ -14,7 +14,7 @@ export default function CTA() {
         Join Our Learning Community
       </h2>
 
-      <p className="text-xl mb-10 text-emerald-100 leading-relaxed">
+      <p className="text-xl mb-10 text-[#fff2d6] leading-relaxed">
         Whether you're a complete beginner or looking to perfect your recitation,
         we have the right course and teacher to guide you every step of the way.
       </p>
