@@ -37,7 +37,7 @@ export default function QuranWithTafseerPage() {
 
           <div className="relative">
             <Image
-              src="/images/courses/quran-tafseer.jpg"
+              src="/images/courses/Tafseer.avif"
               alt="Quran with Tafseer Course"
               width={500}
               height={350}

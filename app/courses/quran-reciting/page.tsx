@@ -36,7 +36,7 @@ export default function QuranRecitingPage() {
 
           <div className="relative">
             <Image
-              src="/images/courses/quran-reciting.jpg"
+              src="/images/courses/Reciting.avif"
               alt="Quran Reciting Course"
               width={500}
               height={350}

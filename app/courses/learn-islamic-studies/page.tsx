@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function LearnIslamicStudiesPage() {
   return (
     <main className="bg-white">
-      {/* HERO SECTION */}
+      
       <section className="bg-[#153c58] text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
@@ -40,7 +40,7 @@ export default function LearnIslamicStudiesPage() {
 
           <div className="relative">
             <Image
-              src="/images/courses/islamic-studies.jpg"
+              src="/images/courses/learn-islamic-studies.jpg"
               alt="Learn Islamic Studies"
               width={500}
               height={350}

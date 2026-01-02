@@ -37,7 +37,7 @@ export default function QuranReadingWithTajweedPage() {
 
           <div className="relative">
             <Image
-              src="/images/courses/quran-tajweed.jpg"
+              src="/images/courses/quran.avif"
               alt="Quran Reading with Tajweed"
               width={500}
               height={350}

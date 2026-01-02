@@ -37,7 +37,7 @@ export default function NamazDuaPage() {
 
           <div className="relative">
             <Image
-              src="/images/courses/namaz-dua.jpg"
+              src="/images/courses/namaz.avif"
               alt="Namaz and Dua Course"
               width={500}
               height={350}
