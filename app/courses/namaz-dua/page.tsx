@@ -1,3 +1,4 @@
+import CoursesCTA from '@/components/CoursesCTA';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -109,22 +110,7 @@ export default function NamazDuaPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#153c58] mb-10 py-14 text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Learn Namaz & Duas with Proper Guidance
-          </h2>
-          <p className="text-green-100 mb-6">
-            Start learning today and improve your Salah step by step.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-white text-green-700 font-semibold px-8 py-3 rounded-lg hover:bg-green-100 transition"
-          >
-            Enroll Now
-          </Link>
-        </div>
-      </section>
+     <CoursesCTA />
     </main>
   );
 }
