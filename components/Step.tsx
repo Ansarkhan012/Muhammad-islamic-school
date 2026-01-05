@@ -22,7 +22,7 @@ export default function Step() {
          
           <div style={{
             backgroundImage: 'url("/images/pattern.png")'
-          }} className="text-center p-6 rounded-xl border">
+          }} className="text-center p-6 rounded-xl border md:py-16">
             <span className="block mb-2 text-[#153c58] text-2xl font-bold">
               Step 1
             </span>
@@ -39,7 +39,7 @@ export default function Step() {
               to arrange your trial classes.
             </p>
 
-            <Link href={"/contact"} className=" py-3 px-5 rounded-3xl bg-[#153c58] text-white font-semibold hover:bg-green-800">
+            <Link href={"/contact"} className=" py-3 px-5 rounded-3xl bg-[#153c58] text-white font-semibold hover:bg-[#205a84]">
               Send Inquiry
             </Link>
           </div>
@@ -47,7 +47,7 @@ export default function Step() {
           
           <div style={{
             backgroundImage: 'url("/images/pattern.png")'
-          }} className="text-center p-6 rounded-xl border">
+          }} className="text-center p-6 rounded-xl border md:py-16">
             <span className="block mb-2 text-[#153c58] text-2xl font-bold">
               Step 2
             </span>
@@ -64,7 +64,7 @@ export default function Step() {
               payment or credit card information.
             </p>
 
-            <Link href={"/contact"} className="my-4 py-3 px-5 rounded-3xl bg-[#153c58] text-white font-semibold hover:bg-green-800">
+            <Link href={"/contact"} className="my-4 py-3 px-5 rounded-3xl bg-[#153c58] text-white font-semibold hover:bg-[#205a84]">
               Send Trial
             </Link>
           </div>
@@ -72,7 +72,7 @@ export default function Step() {
           
           <div style={{
             backgroundImage: 'url("/images/pattern.png")'
-          }} className="text-center p-6 rounded-xl border">
+          }} className="text-center p-6 rounded-xl border md:py-16">
             <span className="block mb-2 text-#153c58 text-2xl font-bold">
               Step 3
             </span>
@@ -89,7 +89,7 @@ export default function Step() {
               monthly plan.
             </p>
 
-            <Link href={"/contact"} className="mt-4 py-3 px-5 rounded-3xl bg-[#153c58] text-white font-semibold hover:bg-green-800">
+            <Link href={"/contact"} className="mt-4 py-3 px-5 rounded-3xl bg-[#153c58] text-white font-semibold hover:bg-[#205a84]">
               Quick Admission
             </Link>
           </div>

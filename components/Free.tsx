@@ -1,0 +1,51 @@
+import Link from 'next/link'
+import React from 'react'
+
+export default function Free() {
+  return (
+    <section
+  className="relative w-full py-20"
+  style={{
+    backgroundImage: "url('/images/pattern.png')",
+    
+  }}
+>
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+
+   
+    <div className="flex justify-center">
+      <img
+        src="/images/2nd.webp"
+        alt="Quran Book"
+        className="w-full rounded-lg max-w-md "
+      />
+    </div>
+
+    
+    <div>
+      <h1 className="text-2xl md:text-4xl font-bold mb-6">
+        TRY FOR{" "}
+        <span className="text-[#C9A24D]">FREE ONLINE QURAN</span>{" "}
+        CLASSES
+      </h1>
+
+      <p className="text-gray-700 text-lg leading-relaxed mb-6 max-w-xl">
+        Complete the form to experience our FREE Trial classes and learn the
+        Quran online. Qaf Quran Academy provides up to Three Days of
+        complimentary trials. Enroll with us today.
+      </p>
+
+      <h2 className="text-2xl md:text-4xl font-bold text-[#C9A24D] mb-8">
+        3 Days Free Trial
+      </h2>
+
+      <Link href={"/contact"} className="bg-[#153c58] hover:bg-[#205a84] transition text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+        Book Free Trial Now
+      </Link>
+    </div>
+
+  </div>
+</section>
+
+  )
+}
