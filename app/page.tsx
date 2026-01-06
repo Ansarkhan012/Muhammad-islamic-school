@@ -126,6 +126,37 @@ export default function page() {
   </div>
 </section>
 
+<section
+  className="relative bg-fixed bg-center bg-cover py-20"
+  style={{
+    backgroundImage:
+      "url('/images/1st.webp')",
+  }}
+>
+  
+  <div className="absolute inset-0 bg-black/60"></div>
+
+ 
+  <div className="relative max-w-6xl mx-auto px-5 py-16 text-white">
+  <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">
+    Experience Before Your Email
+  </h1>
+
+  <div className="max-w-md mx-auto bg-[#1e3a5f] rounded-xl shadow-lg p-8 text-center space-y-4">
+    <h2 className="text-2xl font-semibold">Free Trial</h2>
+    <p className="text-gray-300">30 Minutes Class</p>
+    <p className="text-gray-300">One to One Class</p>
+    <Link
+      href="/contact"
+      className="inline-block mt-4 bg-[#C9A24D] hover:bg-[#e7bb5c] transition-colors text-white font-semibold px-6 py-3 rounded-lg shadow-md"
+    >
+      Get Admission Now
+    </Link>
+  </div>
+</div>
+
+</section>
+
 
 
 <CousreSection />
