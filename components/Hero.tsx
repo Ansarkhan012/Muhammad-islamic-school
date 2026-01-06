@@ -78,10 +78,10 @@ export default function Hero() {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <Link href={"/contact"} className="bg-[#C9A24D] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <Link href={"/contact"} className="bg-[#C9A24D] text-white px-4 md:px-8 py-4 rounded-xl font-bold text-md md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                       Register Now
                     </Link>
-                    <Link href={"/contact"} className="border-2 border-[#C9A24D] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-[#C9A24D] hover:text-white">
+                    <Link href={"/contact"} className="border-2 border-[#C9A24D] text-white px-4 md:px-8  py-4 rounded-xl font-bold text-md md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:bg-[#C9A24D] hover:text-white">
                       Get Free Trial
                     </Link>
                   </div>
