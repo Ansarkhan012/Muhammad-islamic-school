@@ -240,12 +240,12 @@ export default function ContactPage() {
               icon={<Phone />}
               title="WhatsApp"
               text="+92 349 9624807"
-              link="https://wa.me/923499624807"
+              link="https://wa.me/923089250679"
             />
             <InfoItem
               icon={<Mail />}
               title="Email"
-              text="info.alsheeraz@gmail.com"
+              text="nomankhanyusufzai123@gmail.com"
             />
           </div>
         </div>

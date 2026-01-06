@@ -1,93 +1,87 @@
 export default function Footer() {
   return (
-    <footer style={{
-      backgroundImage: `url('/images/pattern.png')`
-    }} className="bg-[#153c58] text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-6 gap-8">
-          
-          <div className="md:col-span-2">
-            <div className="flex items-center mb-2 space-x-3">
-              <div className="">
-                <img src="/images/noman-logo.jpeg" className='w-12 rounded-lg' alt="" />
-              </div>
+    <footer
+      style={{ backgroundImage: "url('/images/pattern.png')" }}
+      className="bg-[#153c58] text-white"
+    >
+      <div className="container mx-auto px-6 py-16">
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+          {/* Column 1 – Brand */}
+          <div>
+            <div className="flex items-center space-x-3 mb-4">
+              <img
+                src="/images/noman-logo.jpeg"
+                className="w-12 h-12 rounded-lg"
+                alt="Logo"
+              />
               <div>
-                <h1 className="text-md md:text-2xl font-bold text-gray-50 bg-clip-text">
-                  Muhammad
-                </h1>
-                <p className="text-xs text-gray-100 font-medium">Islamic School</p>
+                <h1 className="text-xl font-bold">Muhammad</h1>
+                <p className="text-sm text-gray-300">Islamic School</p>
               </div>
             </div>
-            <p className="text-primary-200 mb-6">
-              We are dedicated to providing high-quality Quran education to students worldwide through interactive online classes.
+
+            <p className="text-gray-300 leading-relaxed mb-6">
+              Providing high-quality online Quran education worldwide with
+              certified teachers and one-on-one classes.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="bg-[#C9A24D] p-3 rounded-lg hover:bg-[#9f7e37] transition-colors">
-                <span className="sr-only">Facebook</span>
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-                </svg>
-              </a>
-              <a href="#" className="bg-[#C9A24D] p-3 rounded-lg hover:bg-[#9f7e37] transition-colors">
-                <span className="sr-only">Twitter</span>
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                </svg>
-              </a>
-              <a href="#" className="bg-[#C9A24D] p-3 rounded-lg hover:bg-[#9f7e37] transition-colors">
-                <span className="sr-only">YouTube</span>
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clipRule="evenodd" />
-                </svg>
-              </a>
+
+            <div className="flex space-x-3">
+              {["Facebook", "Twitter", "YouTube"].map((item, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="bg-[#C9A24D] p-3 rounded-lg hover:bg-[#9f7e37] transition"
+                >
+                  <span className="sr-only">{item}</span>
+                </a>
+              ))}
             </div>
           </div>
-          
-          
+
+          {/* Column 2 – Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li><a href="/" className="text-primary-200 hover:text-white transition-colors">Home</a></li>
-              <li><a href="/courses" className="text-primary-200 hover:text-white transition-colors">Courses</a></li>
-              <li><a href="/blog" className="text-primary-200 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="/contact" className="text-primary-200 hover:text-white transition-colors">Contact</a></li>
-              <li><a href="/contact" className="text-primary-200 hover:text-white transition-colors">Free Trial</a></li>
+            <h3 className="text-lg font-semibold mb-5">Quick Links</h3>
+            <ul className="space-y-3 text-gray-300">
+              <li><a href="/" className="hover:text-white">Home</a></li>
+              <li><a href="/about" className="hover:text-white">About Us</a></li>
+              <li><a href="/courses" className="hover:text-white">Courses</a></li>
+              <li><a href="/blog" className="hover:text-white">Blog</a></li>
+              <li><a href="/contact" className="hover:text-white">Free Trial</a></li>
             </ul>
           </div>
-          
-          
+
+          {/* Column 3 – Courses */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Contact Info</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-primary-300 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                <span className="text-primary-200">alsheerazislamicschool@gmail.com</span>
-              </li>
-              <li className="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-primary-300 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                <span className="text-primary-200">+92 349 9624807</span>
-              </li>
-              <li className="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-primary-300 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-primary-200">AL Sheeraz Islamic School<br />Available Worldwide</span>
-              </li>
+            <h3 className="text-lg font-semibold mb-5">Our Courses</h3>
+            <ul className="space-y-3 text-gray-300">
+              <li>Noorani Qaida</li>
+              <li>Quran Recitation</li>
+              <li>Quran with Tajweed</li>
+              <li>Quran Memorization</li>
+              <li>Islamic Studies</li>
             </ul>
           </div>
+
+          {/* Column 4 – Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-5">Contact Info</h3>
+            <ul className="space-y-4 text-gray-300">
+              <li>📧 nomankhanyusufzai123@gmail.com</li>
+              <li>📞 +92 308 9250679</li>
+              <li>📍 Worldwide Online Classes</li>
+            </ul>
+          </div>
+
         </div>
-        
-        
       </div>
-      <div className="border-t bg-[#153c58] border-gray-800 mt-2 py-2 text-center text-primary-300">
-          <p>&copy; {new Date().getFullYear()} Al Sheeraz Islamic School. All rights reserved.</p>
-          
-        </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10 py-4 text-center text-sm text-gray-300">
+        © {new Date().getFullYear()} Muhammad Islamic School. All rights reserved.
+      </div>
     </footer>
   );
 }

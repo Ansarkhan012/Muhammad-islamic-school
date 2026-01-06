@@ -15,7 +15,7 @@ export default function Header() {
     { name: 'COURSES', href: '/courses' },
     { name: 'FEES', href: '/fees' },
     { name: 'CONTACT', href: '/contact' },
-    { name: 'FREE TRIAL', href: '/contact', highlight: true },
+
   ];
 
   const coursesDropdown = [
@@ -44,14 +44,14 @@ export default function Header() {
               href="mailto:muhammadislamicschool@gmail.com"
               className="text-[10px] md:text-sm hover:text-green-200"
             >
-              muhammadislamicschool@gmail.com
+              nomankhanyusufzai123@gmail.com
             </a>
           </div>
 
           <div className="flex items-center">
             <Phone className="h-4 w-4 mr-2 text-[#C9A24D]" />
             <span className="text-[10px] md:text-sm font-medium">
-              +92 349 9624807
+              +92 308 9250679
             </span>
           </div>
         </div>
@@ -59,76 +59,83 @@ export default function Header() {
 
      
       <div className="container mx-auto px-4 py-3">
-        <div className="flex justify-between items-center">
-        
-          <Link href="/" className="flex items-center space-x-3">
-            <Image
-              src="/images/N-logo.png"
-              alt="Muhammad Islamic School"
-              width={50}
-              height={50}
-              priority
-            />
-            <div>
-              <h1 className="text-md md:text-2xl font-bold bg-[#153c58] bg-clip-text text-transparent">
-                Muhammad
-              </h1>
-              <p className="text-xs text-gray-600 font-medium">
-                Islamic School
-              </p>
-            </div>
-          </Link>
+        <div className="flex items-center justify-between">
 
-          {/* DESKTOP NAV */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item) =>
-              item.name === 'COURSES' ? (
-                <div key={item.name} className="relative group">
-                  <span className="px-5 py-2.5 flex items-center gap-1 rounded-lg font-medium text-sm text-gray-800 hover:text-[#C9A24D] cursor-pointer">
-                    COURSES
-                    <ChevronDown size={16} />
-                  </span>
+  {/* LEFT – LOGO */}
+  <Link href="/" className="flex items-center space-x-3">
+    <Image
+      src="/images/N-logo.png"
+      alt="Muhammad Islamic School"
+      width={50}
+      height={50}
+      priority
+    />
+    <div>
+      <h1 className="text-md md:text-2xl font-bold bg-[#153c58] bg-clip-text text-transparent">
+        Muhammad
+      </h1>
+      <p className="text-xs text-gray-600 font-medium">
+        Islamic School
+      </p>
+    </div>
+  </Link>
 
-                  {/* Dropdown */}
-                  <div className="absolute left-0 top-full mt-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-white  shadow-xl border border-gray-100 p-2">
-                      {coursesDropdown.map((course) => (
-                        <Link
-                          key={course.name}
-                          href={course.href}
-                          className="block px-4 py-3 rounded-lg text-sm text-gray-700 hover:bg-[#fffbf2] hover:text-[#C9A24D]"
-                        >
-                          {course.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ) : (
+  {/* CENTER – NAV LINKS */}
+  <nav className="hidden lg:flex items-center space-x-1 absolute left-1/2 -translate-x-1/2">
+    {navItems.map((item) =>
+      item.name === 'COURSES' ? (
+        <div key={item.name} className="relative group">
+          <span className="px-5 py-2.5 flex items-center gap-1 rounded-lg font-medium text-sm text-gray-800 hover:text-[#C9A24D] cursor-pointer">
+            COURSES
+            <ChevronDown size={16} />
+          </span>
+
+          <div className="absolute left-0 top-full mt-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+            <div className="bg-white shadow-xl border p-2">
+              {coursesDropdown.map((course) => (
                 <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`px-5 py-2.5 rounded-lg font-medium text-sm transition
-                    ${
-                      item.highlight
-                        ? 'bg-[#153c58] text-[white] shadow-md hover:shadow-lg'
-                        : 'text-gray-800 hover:text-[#C9A24D]'
-                    }`}
+                  key={course.name}
+                  href={course.href}
+                  className="block px-4 py-3 rounded-lg text-sm text-gray-700 hover:bg-[#fffbf2] hover:text-[#C9A24D]"
                 >
-                  {item.name}
+                  {course.name}
                 </Link>
-              )
-            )}
-          </nav>
-
-          {/* MOBILE BUTTON */}
-          <button
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+              ))}
+            </div>
+          </div>
         </div>
+      ) : (
+        <Link
+          key={item.name}
+          href={item.href}
+          className="px-5 py-2.5 rounded-lg font-medium text-sm text-gray-800 hover:text-[#C9A24D]"
+        >
+          {item.name}
+        </Link>
+      )
+    )}
+  </nav>
+
+  {/* RIGHT – FREE TRIAL BUTTON */}
+  <div className="hidden lg:block">
+    <Link
+      href="/contact"
+      className="bg-[#153c58] text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition"
+    >
+      FREE TRIAL
+    </Link>
+  </div>
+
+  {/* MOBILE MENU BUTTON */}
+  <button
+    className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+  >
+    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+  </button>
+
+</div>
+
 
         {/* MOBILE MENU */}
         {isMenuOpen && (
@@ -173,10 +180,7 @@ export default function Header() {
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium
-                    ${
-                      item.highlight
-                        ? 'bg-[#153c58] text-white'
-                        : 'text-gray-800 hover:bg-green-50 hover:text-[#C9A24D]'
+                    'text-gray-800 hover:bg-green-50 hover:text-[#C9A24D]'
                     }`}
                 >
                   {item.name}
