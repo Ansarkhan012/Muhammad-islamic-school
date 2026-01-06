@@ -90,13 +90,13 @@ export default function Header() {
             <ChevronDown size={16} />
           </span>
 
-          <div className="absolute left-0 top-full mt-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
-            <div className="bg-white shadow-xl border p-2">
+          <div className="absolute left-12 top-full  w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+            <div className="bg-white border border-amber-300 ">
               {coursesDropdown.map((course) => (
                 <Link
                   key={course.name}
                   href={course.href}
-                  className="block px-4 py-3 rounded-lg text-sm text-gray-700 hover:bg-[#fffbf2] hover:text-[#C9A24D]"
+                  className="block px-4 py-3  text-sm text-gray-700 hover:bg-[#153c58] hover:text-[#fff1d4]"
                 >
                   {course.name}
                 </Link>
@@ -116,7 +116,7 @@ export default function Header() {
     )}
   </nav>
 
-  {/* RIGHT – FREE TRIAL BUTTON */}
+ 
   <div className="hidden lg:block">
     <Link
       href="/contact"

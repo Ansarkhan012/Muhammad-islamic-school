@@ -1,7 +1,19 @@
+import {
+  Facebook,
+  Twitter,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin
+} from "lucide-react";
+
+
 export default function Footer() {
   return (
     <footer
-      style={{ backgroundImage: "url('/images/pattern.png')" }}
+      style={{ backgroundImage: "url('/images/pattern.png')",
+        backgroundBlendMode: 'overlay',
+       }}
       className="bg-[#153c58] text-white"
     >
       <div className="container mx-auto px-6 py-16">
@@ -29,16 +41,17 @@ export default function Footer() {
             </p>
 
             <div className="flex space-x-3">
-              {["Facebook", "Twitter", "YouTube"].map((item, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="bg-[#C9A24D] p-3 rounded-lg hover:bg-[#9f7e37] transition"
-                >
-                  <span className="sr-only">{item}</span>
-                </a>
-              ))}
-            </div>
+  <a href="#" className="bg-[#C9A24D] p-3 rounded-lg hover:bg-[#9f7e37] transition">
+    <Facebook size={18} />
+  </a>
+  <a href="#" className="bg-[#C9A24D] p-3 rounded-lg hover:bg-[#9f7e37] transition">
+    <Twitter size={18} />
+  </a>
+  <a href="#" className="bg-[#C9A24D] p-3 rounded-lg hover:bg-[#9f7e37] transition">
+    <Youtube size={18} />
+  </a>
+</div>
+
           </div>
 
           {/* Column 2 – Quick Links */}
@@ -69,10 +82,22 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-5">Contact Info</h3>
             <ul className="space-y-4 text-gray-300">
-              <li>📧 nomankhanyusufzai123@gmail.com</li>
-              <li>📞 +92 308 9250679</li>
-              <li>📍 Worldwide Online Classes</li>
-            </ul>
+  <li className="flex items-center gap-3">
+    <Mail size={18} className="text-[#C9A24D]" />
+    nomankhanyusufzai123@gmail.com
+  </li>
+
+  <li className="flex items-center gap-3">
+    <Phone size={18} className="text-[#C9A24D]" />
+    +92 308 9250679
+  </li>
+
+  <li className="flex items-center gap-3">
+    <MapPin size={18} className="text-[#C9A24D]" />
+    Worldwide Online Classes
+  </li>
+</ul>
+
           </div>
 
         </div>
