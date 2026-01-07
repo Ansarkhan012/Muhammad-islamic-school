@@ -1,4 +1,5 @@
 import CousreSection from '@/components/CousreSection'
+import CTA from '@/components/CTA'
 import Free from '@/components/Free'
 import Hero from '@/components/Hero'
 import Step from '@/components/Step'
@@ -160,6 +161,9 @@ export default function page() {
 
 
 <CousreSection />
+
+
+<CTA />
 
 
 

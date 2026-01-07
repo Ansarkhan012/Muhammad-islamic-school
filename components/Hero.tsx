@@ -34,7 +34,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative cursor-pointer min-h-screen md:min-h-0 md:h-[500px] lg:h-[600px]">
+    <section className="relative cursor-pointer h-svh">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
        
@@ -77,7 +77,7 @@ export default function Hero() {
                     {slide.subtitle}
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <div className="flex flex-row  justify-center gap-4">
                     <Link href={"/contact"} className="bg-[#C9A24D] text-white px-4 md:px-8 py-4 rounded-xl font-bold text-md md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                       Register Now
                     </Link>
