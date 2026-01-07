@@ -130,7 +130,7 @@ export default function page() {
   className="relative bg-fixed bg-center bg-cover py-20"
   style={{
     backgroundImage:
-      "url('/images/1st.webp')",
+      "url('/images/1sts.avif')",
   }}
 >
   

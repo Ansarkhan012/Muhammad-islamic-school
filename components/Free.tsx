@@ -15,7 +15,7 @@ export default function Free() {
    
     <div className="flex justify-center">
       <img
-        src="/images/2nd.webp"
+        src="/images/quran-home.avif"
         alt="Quran Book"
         className="w-full rounded-lg max-w-md "
       />
