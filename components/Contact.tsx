@@ -54,6 +54,9 @@ export default function ContactPage() {
     setIsError(false);
   };
 
+
+  
+
   return (
     <div className="min-h-screen bg-gray-50 pt-14">
       {/* Popup Code unchanged... */}
@@ -159,7 +162,7 @@ export default function ContactPage() {
 
           <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72 mb-4 md:mb-6">
             <Image
-              src="/images/3rd.webp"
+              src="/images/contact.avif"
               alt="Quran Learning"
               fill
               className="rounded-xl md:rounded-2xl object-cover"

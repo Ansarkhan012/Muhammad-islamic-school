@@ -12,14 +12,14 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      image: '/images/1st.webp',
+      image: '/images/1st.avif',
       title: 'Start Your Complete Quran Learning Experience',
       subtitle: 'Interactive Online Quran Classes Designed For All Ages, Anytime, Anywhere',
       highlightColor: 'text-[#C9A24D]'
     },
     {
       id: 2,
-      image: '/images/2nd.webp',
+      image: '/images/2nd.avif',
       title: 'Learn from Certified Quran Teachers',
       subtitle: 'One-on-one sessions with native Arabic speakers and personalized learning plans',
       highlightColor: 'text-[#C9A24D]'
