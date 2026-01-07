@@ -6,12 +6,12 @@ export default function QuranWithTafseerPage() {
   return (
     <main className="bg-white">
       
-      <section className="bg-[#153c58] text-white py-16">
+      <section className=" py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-5xl text-[#153c58] font-bold mb-4">
             Quran with Tafseer
           </h1>
-          <p className="max-w-2xl mx-auto text-green-100 text-sm md:text-base">
+          <p className="max-w-2xl mx-auto text-gray-900 text-sm md:text-base">
             Understand the Holy Quran with authentic Tafseer, historical context,
             and practical lessons for daily life.
           </p>
