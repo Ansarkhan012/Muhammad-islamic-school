@@ -34,7 +34,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative cursor-pointer h-125 md:h-125">
+    <section className="relative cursor-pointer min-h-screen md:h-125">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
        

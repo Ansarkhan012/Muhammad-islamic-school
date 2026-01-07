@@ -17,7 +17,7 @@ export default function Step() {
           </p>
         </div>
 
-        <div className="grid  grid-cols-1 md:grid-cols-3 px-12 gap-10">
+        <div className="grid  grid-cols-1 md:grid-cols-3 px-6 md:px-12 gap-10">
 
          
           <div style={{
