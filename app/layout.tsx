@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/Whatsapp";
 
 export const metadata: Metadata = {
   title: "Muhammad Islamic School",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <footer>
           <Footer />
         </footer>
+        <WhatsAppButton />
       </body>
     </html>
   );
