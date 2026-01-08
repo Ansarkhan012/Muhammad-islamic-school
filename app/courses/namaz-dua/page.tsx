@@ -1,6 +1,13 @@
 import CoursesCTA from '@/components/CoursesCTA';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Learn Namaz & Daily Duas Online | Islamic Education",
+  description: "Master your daily prayers (Namaz) and essential Islamic duas with our easy-to-follow online course. Suitable for kids and adults.",
+  keywords: ["learn namaz online", "daily duas", "islamic prayers for kids"],
+};
 
 export default function NamazDuaPage() {
   return (

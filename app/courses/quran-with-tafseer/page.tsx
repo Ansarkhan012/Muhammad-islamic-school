@@ -1,6 +1,14 @@
 import CoursesCTA from '@/components/CoursesCTA';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Learn Quran with Tafseer Online | Understand Quranic Teachings",
+  description: "Explore the meanings and explanations of the Quran with our online Tafseer course. Perfect for kids and adults to understand Islamic teachings deeply.",
+  keywords: ["quran tafseer online", "learn quran meaning", "understand islamic teachings"],
+};
+
 
 export default function QuranWithTafseerPage() {
   return (

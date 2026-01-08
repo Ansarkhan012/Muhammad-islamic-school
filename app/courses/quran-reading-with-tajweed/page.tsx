@@ -1,6 +1,7 @@
 import CoursesCTA from '@/components/CoursesCTA';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from "next";
 
 export default function QuranReadingWithTajweedPage() {
   return (

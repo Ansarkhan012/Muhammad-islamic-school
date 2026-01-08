@@ -1,6 +1,15 @@
 import CoursesCTA from '@/components/CoursesCTA';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Learn Online Noorani Qaida for Kids & Beginners",
+  description: "Start your Quranic journey with our online Noorani Qaida course. Best for kids and beginners to learn basic Arabic phonetics.",
+  // Keywords agar dalne hon to sirf is page se related 3-4 dalen
+  keywords: ["learn qaida online", "noorani qaida for kids", "basic arabic learning"],
+};
+
 
 export default function LearnIslamicStudiesPage() {
   return (

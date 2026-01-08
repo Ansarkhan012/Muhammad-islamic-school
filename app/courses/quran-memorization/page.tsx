@@ -1,6 +1,14 @@
 import CoursesCTA from '@/components/CoursesCTA';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Quran Memorization Online | Hifz Quran Course",
+  description: "Join our online Hifz Quran course to memorize the Holy Quran with proper Tajweed and recitation techniques. Ideal for students of all ages.",
+  keywords: ["hifz quran online", "quran memorization", "learn tajweed"],
+};
+
 
 export default function QuranMemorizationPage() {
   return (

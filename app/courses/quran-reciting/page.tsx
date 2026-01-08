@@ -1,6 +1,14 @@
 import CoursesCTA from '@/components/CoursesCTA';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Learn Quran Recitation Online | Tajweed & Pronunciation",
+  description: "Improve your Quran recitation skills with our online course. Learn proper Tajweed, pronunciation, and fluency for all ages.",
+  keywords: ["quran reciting online", "learn tajweed", "quran pronunciation"],
+};
+
 
 export default function QuranRecitingPage() {
   return (

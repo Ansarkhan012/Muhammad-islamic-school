@@ -1,6 +1,18 @@
 import CoursesCTA from '@/components/CoursesCTA';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Learn Islamic Studies Online | Muhammad Islamic School",
+  description: "Enroll in our online Islamic Studies course to learn about Quran, Hadith, Fiqh, and Islamic history. Suitable for kids and adults seeking comprehensive Islamic education.",
+  keywords: [
+    "learn islamic studies online",
+    "online islamic education",
+    "quran hadith fiqh",
+  ],
+};
 
 export default function LearnIslamicStudiesPage() {
   return (
