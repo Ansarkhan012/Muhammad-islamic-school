@@ -21,6 +21,7 @@ export default function Header() {
   const coursesDropdown = [
     { name: 'Learn Islamic Studies', href: '/courses/learn-islamic-studies' },
     { name: 'Namaz & Dua', href: '/courses/namaz-dua' },
+    { name: 'Learn Qaida', href: '/courses/learn-qaida' },
     { name: 'Quran Memorization', href: '/courses/quran-memorization' },
     { name: 'Quran Reading with Tajweed', href: '/courses/quran-reading-with-tajweed' },
     { name: 'Quran Reciting', href: '/courses/quran-reciting' },

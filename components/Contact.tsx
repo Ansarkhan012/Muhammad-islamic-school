@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import {
   Phone,
@@ -9,9 +9,9 @@ import {
   MessageSquare,
   Smartphone,
   Globe,
+  MapPin, // City ke liye
+  BookOpen, // Course ke liye
   Send,
-  CheckCircle,
-  X,
 } from 'lucide-react';
 
 type FormData = {
@@ -19,6 +19,8 @@ type FormData = {
   mobile: string;
   email: string;
   country: string;
+  city: string;
+  course: string;
   message: string;
   website?: string; // honeypot
 };
@@ -29,14 +31,14 @@ export default function ContactPage() {
     mobile: '',
     email: '',
     country: 'USA',
+    city: '',
+    course: 'Basic Qaida',
     message: '',
     website: '',
   });
 
   const [loading, setLoading] = useState(false);
-  const [popupMessage, setPopupMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
-  const [isError, setIsError] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -46,15 +48,27 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // Honeypot check
-    if (form.website) return;
+    if (form.website) return; 
 
     setLoading(true);
-    setIsError(false);
+    try {
+      const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID; 
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        alert("Shukriya! Aapka admission form jama ho gaya hai.");
+        setForm({ name: '', mobile: '', email: '', country: 'USA', city: '', course: 'Basic Qaida', message: '', website: '' });
+      }
+    } catch (error) {
+      alert("Error! Dubara koshish karein.");
+    } finally {
+      setLoading(false);
+    }
   };
-
-
   
 
   return (
@@ -83,68 +97,40 @@ export default function ContactPage() {
             Quick Admission Form
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
-            {/* Honeypot */}
-            <input
-              type="text"
-              name="website"
-              value={form.website}
-              onChange={handleChange}
-              className='hidden'
-            />
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input type="text" name="website" value={form.website} onChange={handleChange} className='hidden' />
 
-            <Input 
-              icon={<User size={18} className="sm:w-5 sm:h-5" />} 
-              name="name" 
-              placeholder="Full Name" 
-              value={form.name} 
-              onChange={handleChange} 
-            />
-            <Input
-              icon={<Smartphone size={18} className="sm:w-5 sm:h-5" />}
-              name="mobile"
-              placeholder="+923001234567"
-              value={form.mobile}
-              onChange={handleChange}
-            />
-            <Input 
-              icon={<Mail size={18} className="sm:w-5 sm:h-5" />} 
-              name="email" 
-              type="email" 
-              placeholder="Email Address" 
-              value={form.email} 
-              onChange={handleChange} 
-            />
+            <Input icon={<User size={18} />} name="name" placeholder="Full Name" value={form.name} onChange={handleChange} />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Input icon={<Smartphone size={18} />} name="mobile" placeholder="WhatsApp Number" value={form.mobile} onChange={handleChange} />
+              <Input icon={<Mail size={18} />} name="email" type="email" placeholder="Email Address" value={form.email} onChange={handleChange} />
+            </div>
 
-            <select
-              name="country"
-              value={form.country}
-              onChange={handleChange}
-              className="w-full p-3 text-sm sm:text-base rounded-lg md:rounded-xl bg-gray-50 text-black focus:outline-none focus:ring-2 focus:ring-[#C9A24D]"
-            >
-              <option>USA</option>
-              <option>UK</option>
-              <option>Canada</option>
-              <option>Pakistan</option>
-              <option>UAE</option>
-            </select>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <select name="country" value={form.country} onChange={handleChange} className="w-full p-3 rounded-xl bg-white text-black focus:ring-2 focus:ring-[#C9A24D]">
+                <option>USA</option><option>UK</option><option>Canada</option><option>Pakistan</option><option>UAE</option>
+              </select>
+              <div className="relative">
+                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"><MapPin size={18} /></span>
+                <input name="city" placeholder="City" value={form.city} onChange={handleChange} className="w-full pl-10 p-3 rounded-xl text-black bg-white focus:outline-none focus:ring-2 focus:ring-[#C9A24D]" required />
+              </div>
+            </div>
 
-            <textarea
-              name="message"
-              rows={3}
-              placeholder="Your message..."
-              value={form.message}
-              onChange={handleChange}
-              className="w-full p-3 text-sm sm:text-base rounded-lg md:rounded-xl bg-gray-50 text-black focus:outline-none focus:ring-2 focus:ring-[#C9A24D]"
-            />
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"><BookOpen size={18} /></span>
+              <select name="course" value={form.course} onChange={handleChange} className="w-full pl-10 p-3 rounded-xl bg-white text-black focus:ring-2 focus:ring-[#C9A24D]">
+                <option>Basic Qaida</option>
+                <option>Quran with Tajweed</option>
+                <option>Hifz-ul-Quran</option>
+                <option>Islamic Studies</option>
+              </select>
+            </div>
 
-            <button
-              disabled={loading}
-              className="w-full bg-black py-3 md:py-4 text-sm sm:text-base rounded-lg md:rounded-xl flex justify-center items-center gap-2 hover:bg-gray-800 transition-colors"
-            >
-              {loading ? 'Sending...' : <>
-                <Send size={18} className="sm:w-5 sm:h-5" /> Send Message
-              </>}
+            <textarea name="message" rows={3} placeholder="Any specific requirements or details?" value={form.message} onChange={handleChange} className="w-full p-3 rounded-xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#C9A24D]" />
+
+            <button disabled={loading} className="w-full bg-[#C9A24D] hover:bg-[#b08e40] py-4 rounded-xl flex justify-center items-center gap-2 font-bold transition-all shadow-lg text-white">
+              {loading ? 'Submitting...' : <><Send size={18} /> Submit Admission</>}
             </button>
           </form>
         </div>
