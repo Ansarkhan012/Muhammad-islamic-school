@@ -1,29 +1,32 @@
 import CoursesCTA from '@/components/CoursesCTA';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Learn Online Noorani Qaida for Kids & Beginners",
-  description: "Start your Quranic journey with our online Noorani Qaida course. Best for kids and beginners to learn basic Arabic phonetics.",
-  // Keywords agar dalne hon to sirf is page se related 3-4 dalen
-  keywords: ["learn qaida online", "noorani qaida for kids", "basic arabic learning"],
+  title: "Learn Noorani Qaida Online for Kids & Beginners",
+  description:
+    "Start Quran reading with our online Noorani Qaida course. Perfect for kids and beginners to learn Arabic letters, pronunciation, and basic Tajweed.",
+  keywords: [
+    "learn noorani qaida online",
+    "noorani qaida for kids",
+    "basic arabic qaida",
+    "qaida with tajweed",
+  ],
 };
 
-
-export default function LearnIslamicStudiesPage() {
+export default function LearnNooraniQaidaPage() {
   return (
     <main className="bg-white">
       {/* HERO SECTION */}
-      <section className=" py-16">
+      <section className="py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-5xl text-[#153c58] font-bold mb-4">
-            Learn Islamic Studies
+            Learn Noorani Qaida
           </h1>
           <p className="max-w-2xl mx-auto text-gray-900 text-sm md:text-base">
-            Build strong Islamic knowledge with structured lessons covering
-            beliefs, worship, manners, and Islamic history — suitable for all
-            age groups.
+            Begin your Quran journey by learning Noorani Qaida with correct
+            pronunciation, Arabic letters, and basic Tajweed — ideal for kids
+            and beginners.
           </p>
         </div>
       </section>
@@ -36,22 +39,22 @@ export default function LearnIslamicStudiesPage() {
               About This Course
             </h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Our <strong>Learn Islamic Studies</strong> course is designed to
-              help students understand Islam in a clear, authentic, and
-              practical way. The curriculum is based on the Quran and Sunnah,
-              taught by qualified Islamic teachers.
+              Our <strong>Noorani Qaida</strong> course is specially designed for
+              students who want to learn Quran reading from the basics. This
+              course focuses on Arabic letters, correct pronunciation
+              (Makharij), and foundational Tajweed rules.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              This course focuses on building correct beliefs (Aqeedah),
-              improving character (Akhlaq), and learning how to practice Islam
-              in daily life.
+              With step-by-step lessons taught by qualified Quran teachers,
+              students gain confidence to read the Quran fluently and
+              accurately.
             </p>
           </div>
 
           <div className="relative">
             <Image
-              src="/images/courses/islamic-studies.jpg"
-              alt="Learn Islamic Studies"
+              src="/images/norani.webp"
+              alt="Learn Noorani Qaida Online"
               width={500}
               height={350}
               className="rounded-xl shadow-lg"
@@ -69,12 +72,12 @@ export default function LearnIslamicStudiesPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'Basic Aqeedah (Islamic Beliefs)',
-              'Five Pillars of Islam',
-              'Islamic Manners & Character',
-              'Seerah of Prophet Muhammad ﷺ',
-              'Islamic History',
-              'Daily Islamic Practices',
+              'Arabic Letters Recognition',
+              'Correct Pronunciation (Makharij)',
+              'Joining Letters',
+              'Harakat (Zabar, Zer, Pesh)',
+              'Tanween & Sukoon',
+              'Basic Tajweed Rules',
             ].map((item) => (
               <div
                 key={item}
@@ -84,7 +87,8 @@ export default function LearnIslamicStudiesPage() {
                   {item}
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Structured lessons taught in an easy and engaging way.
+                  Simple, structured lessons to build a strong Quran reading
+                  foundation.
                 </p>
               </div>
             ))}
@@ -102,10 +106,10 @@ export default function LearnIslamicStudiesPage() {
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
             <div className="border rounded-xl p-6">
               <h3 className="font-semibold text-gray-800 mb-2">
-                Children
+                Kids
               </h3>
               <p className="text-gray-600 text-sm">
-                Build strong Islamic foundations from an early age.
+                Perfect for children starting their Quran learning journey.
               </p>
             </div>
 
@@ -114,7 +118,8 @@ export default function LearnIslamicStudiesPage() {
                 Adults & Beginners
               </h3>
               <p className="text-gray-600 text-sm">
-                Learn Islam step-by-step in a simple and practical way.
+                Ideal for beginners who want to learn Quran reading from
+                scratch.
               </p>
             </div>
           </div>

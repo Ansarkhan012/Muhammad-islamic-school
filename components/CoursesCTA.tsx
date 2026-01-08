@@ -14,7 +14,7 @@ function CoursesCTA() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-[#C9A24D] font-semibold px-8 py-3 rounded-lg hover:bg-[#ffe5ab] transition"
+            className="inline-block bg-white text-[#C9A24D] font-semibold px-8 py-3 rounded-lg hover:bg-[#C9A24D] hover:text-white transition"
           >
             Enroll Now
           </Link>
