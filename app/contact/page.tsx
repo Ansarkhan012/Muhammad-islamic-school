@@ -64,7 +64,7 @@ export default function Contacte() {
   });
 
   const onSubmit = async (data: FormData) => {
-    if (data.website) return; // Spam protection
+    if (data.website) return; 
 
     try {
       const res = await fetch('/api/contact', {
