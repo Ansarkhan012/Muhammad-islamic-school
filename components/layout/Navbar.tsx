@@ -42,10 +42,10 @@ export default function Header() {
           <div className="flex items-center">
             <Mail className="h-4 w-4 mr-2 text-[#C9A24D]" />
             <a
-              href="mailto:muhammadislamicschool@gmail.com"
+              href="mailto:muhammadislamicschool12@gmail.com"
               className="text-[10px] md:text-sm hover:text-green-200"
             >
-              nomankhanyusufzai123@gmail.com
+              muhammadislamicschool12@gmail.com
             </a>
           </div>
 

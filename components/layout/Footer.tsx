@@ -84,7 +84,7 @@ export default function Footer() {
             <ul className="space-y-4 text-gray-300">
   <li className="flex items-center gap-3">
     <Mail size={18} className="text-[#C9A24D]" />
-    nomankhanyusufzai123@gmail.com
+    muhammadislamicschool12@gmail.com
   </li>
 
   <li className="flex items-center gap-3">
@@ -94,7 +94,7 @@ export default function Footer() {
 
   <li className="flex items-center gap-3">
     <MapPin size={18} className="text-[#C9A24D]" />
-    Worldwide Online Classes
+    Kotli Bala Mansehra, KPK, Pakistan
   </li>
 </ul>
 

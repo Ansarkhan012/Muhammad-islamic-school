@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     });
 
     await transporter.sendMail({
-      from: `"Al Sheeraz Islamic School" <${process.env.EMAIL_USER}>`,
+      from: `"Muhammad Islamic School" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_TO,
       replyTo: email,
       subject: '📩 New Admission Inquiry',
