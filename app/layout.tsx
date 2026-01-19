@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/Whatsapp";
+import Script from "next/script";
 // 1. Ye import line add karen
 
 
@@ -41,6 +42,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-X8LVE77G6N"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X8LVE77G6N');
+          `}
+        </Script>
+      </head>
       <body>
         <header className="sticky -top-12 z-10">
           <Header />
