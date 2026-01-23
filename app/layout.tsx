@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Muhammad Islamic School",
     images: [
       {
-        url: "/noman-logo.jpeg", // Apni website ka ek image path yahan lazmi den
+        url: "/noman-logo.jpeg", 
         width: 1200,
         height: 630,
       },
